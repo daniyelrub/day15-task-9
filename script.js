@@ -1,24 +1,51 @@
+function countdownFromTen() {
+  setTimeout(() => {
+      document.getElementById('countdown').innerText = 10;
+      setTimeout(() => {
+          document.getElementById('countdown').innerText = 9;
+          setTimeout(() => {
+              document.getElementById('countdown').innerText = 8;
+              setTimeout(() => {
+                  document.getElementById('countdown').innerText = 7;
+                  setTimeout(() => {
+                      document.getElementById('countdown').innerText = 6;
+                      setTimeout(() => {
+                          document.getElementById('countdown').innerText = 5;
+                          setTimeout(() => {
+                              document.getElementById('countdown').innerText = 4;
+                              setTimeout(() => {
+                                  document.getElementById('countdown').innerText = 3;
+                                  setTimeout(() => {
+                                      document.getElementById('countdown').innerText = 2;
+                                      setTimeout(() => {
+                                          document.getElementById('countdown').innerText = 1;
+                                          setTimeout(() => {
+                                              displayBigText();
+                                          }, 1000);
+                                      }, 1000);
+                                  }, 1000);
+                              }, 1000);
+                          }, 1000);
+                      }, 1000);
+                  }, 1000);
+              }, 1000);
+          }, 1000);
+      }, 1000);
+  }, 1000);
+}
 
-function countdownFromTen(callback) {
-    let count = 10;
-    
-    function countdown() {
-      document.getElementById('countdown').innerText = count;
-      count--;
-  
-      if (count >= 0) {
-        setTimeout(countdown, 1000); // Call countdown function after 1 second
-      } else {
-        callback();
-      }
-    }
-  
-    countdown();
-  }
-  
-  function displayBigText() {
-    document.getElementById('countdown').innerText = 'Happy Independence Day!';
-    document.getElementById('countdown').classList.add('big-text');
-  }
-  
-  countdownFromTen(displayBigText);
+function displayBigText() {
+  document.getElementById('countdown').innerText = 'Happy Independence Day!';
+  document.getElementById('countdown').classList.add('big-text');
+}
+
+countdownFromTen();
+
+
+
+
+
+
+
+
+
